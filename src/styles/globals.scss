@@ -1,3 +1,6 @@
+@use 'theme' as theme;
+
+@import 'colors-tokens';
 @import 'variables';
 
 :root {
@@ -41,4 +44,12 @@ a {
   html {
     color-scheme: dark;
   }
+}
+
+html[data-theme='dark'] {
+  @include theme.dark;
+}
+
+html[data-theme='light'] {
+  @include theme.light;
 }
