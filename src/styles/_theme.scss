@@ -1,0 +1,87 @@
+@use '../ui/Button/button-theme' as btn-theme;
+
+@mixin light {
+  --surface-0: var(--surface-light-0);
+  --surface-1: var(--surface-light-1);
+  --surface-2: var(--surface-light-2);
+  --surface-3: var(--surface-light-3);
+  --surface-4: var(--surface-light-4);
+  --surface-5: var(--surface-light-5);
+  --surface-6: var(--surface-light-6);
+  --surface-7: var(--surface-light-7);
+  --surface-8: var(--surface-light-8);
+  --surface-9: var(--surface-light-9);
+  --surface-10: var(--surface-light-10);
+
+  //color for background
+  --main-bg-color: var(--surface-0);
+
+  //color for scrollbar
+  --scrollbar-bg: var(--surface-10);
+
+  //new colors for background gradient
+  --bg-gradient-opacity: 0.08;
+  --bg-gradient-color: linear-gradient(135deg, #ffaa79 0%, #f43b3b 100%);
+
+  // for 404 title common color
+  --error-planet-bg: #eee;
+  --error-planet-bg-dark: #7b7b87;
+  --error-planet-bg-light: #f4ede6;
+  --error-planet-bg-semi-light: #d4d1cd;
+
+  //for not started status icon
+  --status-icon: #1b1a26;
+
+  // navigation tab button
+  --nav-button: #a8a8a8;
+  --nav-button-active: #474752;
+
+  //colors for calendar component
+  --calendar-range: var(--lavender-5);
+  --calendar-background: var(--surface-0);
+
+  @include btn-theme.light();
+}
+
+@mixin dark {
+  --surface-0: var(--surface-dark-0);
+  --surface-1: var(--surface-dark-1);
+  --surface-2: var(--surface-dark-2);
+  --surface-3: var(--surface-dark-3);
+  --surface-4: var(--surface-dark-4);
+  --surface-5: var(--surface-dark-5);
+  --surface-6: var(--surface-dark-6);
+  --surface-7: var(--surface-dark-7);
+  --surface-8: var(--surface-dark-8);
+  --surface-9: var(--surface-dark-9);
+  --surface-10: var(--surface-dark-10);
+
+  //color for background
+  --main-bg-color: var(--surface-0);
+
+  //color for scrollbar
+  --scrollbar-bg: var(--surface-0);
+
+  //colors for background gradient
+  --bg-gradient-opacity: 0.1;
+  --bg-gradient-color: var(--lavender-5);
+
+  // for 404 title common color
+  --error-planet-bg: #222231;
+  --error-planet-bg-dark: #222231;
+  --error-planet-bg-light: #37374a;
+  --error-planet-bg-semi-light: #2b2b3d;
+
+  //  for not started status icon
+  --status-icon: var(--orange-0);
+
+  // navigation tab button
+  --nav-button: #6f6f88;
+  --nav-button-active: #fefeff;
+
+  //colors for calendar component
+  --calendar-range: var(--lavender-5);
+  --calendar-background: var(--surface-3);
+
+  @include btn-theme.dark();
+}

@@ -1,0 +1,75 @@
+@use 'spacings';
+
+@each $s in map-keys(spacings.$spacings-map) {
+  .m-#{$s} {
+    margin: map-get(spacings.$spacings-map, $s);
+  }
+}
+
+@each $s in map-keys(spacings.$spacings-map) {
+  .mx-#{$s} {
+    margin-left: map-get(spacings.$spacings-map, $s);
+    margin-right: map-get(spacings.$spacings-map, $s);
+  }
+}
+
+@each $s in map-keys(spacings.$spacings-map) {
+  .my-#{$s} {
+    margin-top: map-get(spacings.$spacings-map, $s);
+    margin-bottom: map-get(spacings.$spacings-map, $s);
+  }
+}
+
+@each $s in map-keys(spacings.$spacings-map) {
+  .ml-#{$s} {
+    margin-left: map-get(spacings.$spacings-map, $s);
+  }
+}
+
+@each $s in map-keys(spacings.$spacings-map) {
+  .mt-#{$s} {
+    margin-top: map-get(spacings.$spacings-map, $s);
+  }
+}
+
+@each $s in map-keys(spacings.$spacings-map) {
+  .mr-#{$s} {
+    margin-right: map-get(spacings.$spacings-map, $s);
+  }
+}
+
+@each $s in map-keys(spacings.$spacings-map) {
+  .mb-#{$s} {
+    margin-bottom: map-get(spacings.$spacings-map, $s);
+  }
+}
+
+.mt-auto {
+  margin-top: auto;
+}
+
+.mr-auto {
+  margin-right: auto;
+}
+
+.mb-auto {
+  margin-bottom: auto;
+}
+
+.ml-auto {
+  margin-left: auto;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.my-auto {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.\!m-0 {
+  margin: 0 !important;
+}

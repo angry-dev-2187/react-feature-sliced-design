@@ -1,0 +1,63 @@
+@use "variables" as v;
+@use "sass:map";
+
+.root {
+  &:not(.inline) {
+    display: flex;
+  }
+
+  &.inline {
+    display: inline-flex;
+  }
+
+  &.wrap {
+    flex-wrap: wrap;
+  }
+
+  // Direction
+  &.direction-row {
+    flex-direction: row;
+  }
+
+  &.direction-column {
+    flex-direction: column;
+  }
+
+  &.direction-row-reverse {
+    flex-direction: row-reverse;
+  }
+
+  &.direction-column-reverse {
+    flex-direction: column-reverse;
+  }
+
+
+  // Gap
+  @each $key in map.keys(v.$spacings-map) {
+    &.gap-#{$key} {
+      gap: map.get(v.$spacings-map, $key);
+    }
+
+    &.row-gap-#{$key} {
+      row-gap: map.get(v.$spacings-map, $key);
+    }
+
+    &.col-gap-#{$key} {
+      column-gap: map.get(v.$spacings-map, $key);
+    }
+  }
+
+  // Align
+  @each $key in map.keys(v.$align-map) {
+    &.align-#{$key} {
+      align-items: map.get(v.$align-map, $key);
+    }
+  }
+
+  // Justify
+  @each $key in map.keys(v.$justify-map) {
+    &.justify-#{$key} {
+      justify-content: map.get(v.$justify-map, $key);
+    }
+  }
+}
