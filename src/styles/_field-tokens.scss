@@ -1,0 +1,58 @@
+@use 'variables' as v;
+
+:root {
+  // Typography
+  --field-font-size: #{v.$font-size-xs};
+  --field-font-weight: #{v.$font-weight-regular};
+  --field-line-height: #{v.$line-height-md};
+
+  // Border
+  --field-border-width: 1px;
+  --field-border-radius: #{v.$border-radius-xs};
+
+  // === Default variant ===
+
+  // Text color
+  --field-text-color: #{v.$surface-10};
+  --field-text-color-hovered: #{v.$surface-9};
+  --field-text-color-focused: #{v.$surface-9};
+  --field-text-color-disabled: #{v.$surface-7};
+
+  // Placeholder color
+  --field-placeholder-color: #{v.$surface-7};
+  --field-placeholder-color-hovered: #{v.$surface-7};
+  --field-placeholder-color-focused: #{v.$surface-7};
+  --field-placeholder-color-disabled: #{v.$surface-6};
+
+  // Border color
+  --field-border-color: #{v.$surface-4};
+  --field-border-color-hovered: #{v.$surface-6};
+  --field-border-color-focused: #{v.$accent-5};
+  --field-border-color-invalid: #{v.$error-4};
+
+  // Background color
+  --field-background-color: #{v.$surface-2};
+
+  // === Secondary variant ===
+
+  // Text color
+  --field-text-secondary-color: #{v.$surface-8};
+  --field-text-secondary-color-hovered: #{v.$surface-9};
+  --field-text-secondary-color-focused: #{v.$surface-9};
+  --field-text-secondary-color-disabled: #{v.$surface-7};
+
+  // Placeholder
+  --field-placeholder-secondary-color: #{v.$surface-7};
+  --field-placeholder-secondary-color-hovered: #{v.$surface-8};
+  --field-placeholder-secondary-color-focused: #{v.$surface-8};
+  --field-placeholder-secondary-color-disabled: #{v.$surface-6};
+
+  // Border color
+  --field-border-secondary-color: transparent;
+  --field-border-secondary-color-hovered: #{v.$surface-3};
+  --field-border-secondary-color-focused: #{v.$surface-4};
+  --field-border-secondary-color-invalid: #{v.$error-4};
+
+  // Background color
+  --field-background-secondary-color: transparent;
+}

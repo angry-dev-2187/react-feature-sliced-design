@@ -1,0 +1,27 @@
+:root {
+  --base-font-family: 'Source Sans Pro', -apple-system, 'Segoe UI', 'Roboto', 'Ubuntu', 'Helvetica Neue', sans-serif;
+  --base-font-size: 16px;
+  --base-font-weight: 400;
+  --base-line-height: 1.25;
+
+  // Font size
+
+  --font-size-xs: calc(var(--base-font-size) * 0.75); // 12
+  --font-size-sm: calc(var(--base-font-size) * 0.875); // 14
+  --font-size-md: calc(var(--base-font-size) * 1); // 16
+  --font-size-lg: calc(var(--base-font-size) * 1.25); // 20
+  --font-size-xl: calc(var(--base-font-size) * 1.5); // 24
+  --font-size-xxl: calc(var(--base-font-size) * 2); // 32
+  --font-size-xxxl: calc(var(--base-font-size) * 2.5); // 40
+
+  // Font weight
+
+  --font-weight-regular: var(--base-font-weight);
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  // Line height
+  --line-height-sm: calc(var(--base-line-height) * 0.8); // 1
+  --line-height-md: calc(var(--base-line-height)); // 1.25
+  --line-height-lg: calc(var(--base-line-height) * 1.2); // 1.5
+}

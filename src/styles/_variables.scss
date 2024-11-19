@@ -1,0 +1,55 @@
+@forward "breakpoints";
+@forward "spacings";
+@forward "colors-variables";
+@forward "typography-variables";
+
+$color-white: #fff;
+
+// Border-radiuses
+$border-radius-xs: 3px;
+$border-radius-sm: 6px;
+$border-radius-md: 9px;
+$border-radius-lg: 12px;
+$border-radius-xl: 16px; // TODO
+$border-radius-max: 9999px;
+
+$border-radius-tooltip: $border-radius-sm;
+
+// Transitions
+$duration-s: 0.2s;
+$duration-m: 0.4s;
+$duration-l: 0.6s;
+
+$align-map: (
+  start: flex-start,
+  end: flex-end,
+  center: center,
+  stretch: stretch,
+  baseline: baseline,
+);
+
+$align-self-map: (
+  start: flex-start,
+  end: flex-end,
+  center: center,
+  stretch: stretch,
+  baseline: baseline,
+);
+
+$justify-map: (
+  start: flex-start,
+  end: flex-end,
+  center: center,
+  stretch: stretch,
+  space-around: space-around,
+  space-between: space-between,
+  space-evenly: space-evenly,
+);
+
+$justify-self-map: (
+  start: flex-start,
+  end: flex-end,
+  center: center,
+  stretch: stretch,
+  baseline: baseline,
+);

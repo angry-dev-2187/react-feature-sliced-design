@@ -1,0 +1,118 @@
+$surface-0: var(--surface-0);
+$surface-1: var(--surface-1);
+$surface-2: var(--surface-2);
+$surface-3: var(--surface-3);
+$surface-4: var(--surface-4);
+$surface-5: var(--surface-5);
+$surface-6: var(--surface-6);
+$surface-7: var(--surface-7);
+$surface-8: var(--surface-8);
+$surface-9: var(--surface-9);
+$surface-10: var(--surface-10);
+
+$surface-map: (
+  0: $surface-0,
+  1: $surface-1,
+  2: $surface-2,
+  3: $surface-3,
+  4: $surface-4,
+  5: $surface-5,
+  6: $surface-6,
+  7: $surface-7,
+  8: $surface-8,
+  9: $surface-9,
+  10: $surface-10,
+);
+
+$accent-0: var(--lavender-0);
+$accent-1: var(--lavender-1);
+$accent-2: var(--lavender-2);
+$accent-3: var(--lavender-3);
+$accent-4: var(--lavender-4);
+$accent-5: var(--lavender-5);
+$accent-6: var(--lavender-6);
+$accent-7: var(--lavender-7);
+$accent-8: var(--lavender-8);
+$accent-9: var(--lavender-9);
+
+$accent-map: (
+  0: $accent-0,
+  1: $accent-1,
+  2: $accent-2,
+  3: $accent-3,
+  4: $accent-4,
+  5: $accent-5,
+  6: $accent-6,
+  7: $accent-7,
+  8: $accent-8,
+  9: $accent-9,
+);
+
+$accent-gradient-1: var(--lavender-gradient-1);
+$accent-gradient-2: var(--lavender-gradient-2);
+$accent-gradient-3: var(--lavender-gradient-3);
+
+$accent-gradient-map: (
+  1: $accent-gradient-1,
+  2: $accent-gradient-2,
+  3: $accent-gradient-3,
+);
+
+$highlight-0: var(--orange-0);
+$highlight-1: var(--orange-1);
+$highlight-2: var(--orange-2);
+$highlight-3: var(--orange-3);
+$highlight-4: var(--orange-4);
+$highlight-5: var(--orange-5);
+$highlight-6: var(--orange-6);
+
+$highlight-map: (
+  0: $highlight-0,
+  1: $highlight-1,
+  2: $highlight-2,
+  3: $highlight-3,
+  4: $highlight-4,
+  5: $highlight-5,
+  6: $highlight-6,
+);
+
+$highlight-gradient-0: var(--organge-gradient-0);
+$highlight-gradient-1: var(--organge-gradient-1);
+$highlight-gradient-2: var(--organge-gradient-2);
+
+$highlight-gradient-map: (
+  0: $highlight-gradient-0,
+  1: $highlight-gradient-0,
+  2: $highlight-gradient-0,
+  3: $highlight-gradient-0,
+  4: $highlight-gradient-1,
+  5: $highlight-gradient-1,
+  6: $highlight-gradient-1,
+  7: $highlight-gradient-2,
+  8: $highlight-gradient-2,
+  9: $highlight-gradient-2,
+);
+
+$success-0: var(--green-0);
+$success-1: var(--green-1);
+$success-2: var(--green-2);
+$success-3: var(--green-3);
+$success-4: var(--green-4);
+$success-5: var(--green-5);
+$success-6: var(--green-6);
+
+$warning-0: var(--yellow-0);
+$warning-1: var(--yellow-1);
+$warning-2: var(--yellow-2);
+$warning-3: var(--yellow-3);
+$warning-4: var(--yellow-4);
+$warning-5: var(--yellow-5);
+$warning-6: var(--yellow-6);
+
+$error-0: var(--red-0);
+$error-1: var(--red-1);
+$error-2: var(--red-2);
+$error-3: var(--red-3);
+$error-4: var(--red-4);
+$error-5: var(--red-5);
+$error-6: var(--red-6);

@@ -1,0 +1,49 @@
+@use 'spacings';
+
+@each $s in map-keys(spacings.$spacings-map) {
+  .p-#{$s} {
+    padding: map-get(spacings.$spacings-map, $s);
+  }
+}
+
+@each $s in map-keys(spacings.$spacings-map) {
+  .px-#{$s} {
+    padding-left: map-get(spacings.$spacings-map, $s);
+    padding-right: map-get(spacings.$spacings-map, $s);
+  }
+}
+
+@each $s in map-keys(spacings.$spacings-map) {
+  .py-#{$s} {
+    padding-top: map-get(spacings.$spacings-map, $s);
+    padding-bottom: map-get(spacings.$spacings-map, $s);
+  }
+}
+
+@each $s in map-keys(spacings.$spacings-map) {
+  .pl-#{$s} {
+    padding-left: map-get(spacings.$spacings-map, $s);
+  }
+}
+
+@each $s in map-keys(spacings.$spacings-map) {
+  .pt-#{$s} {
+    padding-top: map-get(spacings.$spacings-map, $s);
+  }
+}
+
+@each $s in map-keys(spacings.$spacings-map) {
+  .pr-#{$s} {
+    padding-right: map-get(spacings.$spacings-map, $s);
+  }
+}
+
+@each $s in map-keys(spacings.$spacings-map) {
+  .pb-#{$s} {
+    padding-bottom: map-get(spacings.$spacings-map, $s);
+  }
+}
+
+.\!p-0 {
+  padding: 0 !important;
+}

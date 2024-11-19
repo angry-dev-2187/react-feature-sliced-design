@@ -1,0 +1,14 @@
+/*
+* Map for breakpoints
+*/
+$breakpoints: (
+  'sm': 375px,
+  'md': 768px,
+  'lg': 1024px,
+);
+
+@mixin responsive($size) {
+  @media screen and (max-width: map-get($breakpoints, $size)) {
+    @content;
+  }
+}
