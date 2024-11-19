@@ -1,0 +1,60 @@
+@use 'variables' as v;
+
+.root {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  .svg .circle:last-of-type {
+    stroke: var(--spinner-primary-ring-color);
+  }
+
+  &.stroked .svg .circle:first-of-type {
+    stroke: v.$surface-4;
+  }
+
+  &.highlight {
+    --spinner-primary-ring-color: #{v.$highlight-5};
+  }
+
+  &.accent {
+    --spinner-primary-ring-color: #{v.$accent-5};
+  }
+
+  &.default {
+    --spinner-primary-ring-color: #{v.$surface-9};
+  }
+}
+
+.svg {
+  animation: rotate 2.5s linear infinite;
+  z-index: 2;
+
+  & .circle:last-of-type {
+    z-index: 100;
+    stroke-linecap: round;
+    animation: dash 2s ease-in-out infinite;
+  }
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes dash {
+  0% {
+    stroke-dasharray: 1, 150;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: -35;
+  }
+  100% {
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: -124;
+  }
+}
