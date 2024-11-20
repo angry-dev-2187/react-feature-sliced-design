@@ -1,0 +1,135 @@
+@use 'variables' as v;
+
+@mixin light {
+  // Default
+  --btn-default-bg-color: rgba(53, 53, 112, 0.05);
+  --btn-default-bg-color-hovered: rgba(53, 53, 112, 0.1);
+  --btn-default-bg-color-focused: rgba(53, 53, 112, 0.05);
+  --btn-default-bg-color-active: rgba(53, 53, 112, 0.15);
+  --btn-default-bg-color-disabled: transparent;
+  --btn-default-color: #{v.$accent-7};
+  --btn-default-color-hovered: #{v.$accent-8};
+  --btn-default-color-focused: #{v.$accent-7};
+  --btn-default-color-active: #{v.$accent-9};
+  --btn-default-color-disabled: #b4b4c9;
+  --btn-default-spinner-primary-ring-color: #{v.$surface-10};
+
+  // Primary
+  --btn-primary-bg-color: #{v.$accent-9};
+  --btn-primary-bg-color-hovered: #{v.$accent-8};
+  --btn-primary-bg-color-focused: #{v.$accent-9};
+  --btn-primary-bg-color-active: #{v.$accent-7};
+  --btn-primary-bg-color-disabled: #{v.$surface-4};
+  --btn-primary-color: #{v.$surface-2};
+  --btn-primary-color-hovered: #{v.$surface-1};
+  --btn-primary-color-focused: #{v.$surface-2};
+  --btn-primary-color-active: #{v.$surface-1};
+  --btn-primary-color-disabled: #b4b4c9;
+  --btn-primary-spinner-primary-ring-color: #{v.$surface-1};
+
+  // Secondary
+  --btn-secondary-bg-color: transparent;
+  --btn-secondary-bg-color-hovered: transparent;
+  --btn-secondary-bg-color-focused: transparent;
+  --btn-secondary-bg-color-active: transparent;
+  --btn-secondary-bg-color-disabled: transparent;
+  --btn-secondary-color: #{v.$surface-7};
+  --btn-secondary-color-hovered: #{v.$surface-9};
+  --btn-secondary-color-focused: #{v.$surface-7};
+  --btn-secondary-color-active: #{v.$surface-8};
+  --btn-secondary-color-disabled: #b4b4c9;
+  --btn-secondary-spinner-primary-ring-color: #{v.$surface-10};
+
+  // Link
+  --btn-link-bg-color: transparent;
+  --btn-link-bg-color-hovered: transparent;
+  --btn-link-bg-color-focused: transparent;
+  --btn-link-bg-color-active: transparent;
+  --btn-link-bg-color-disabled: transparent;
+  --btn-link-color: rgba(132, 137, 255, 0.6);
+  --btn-link-color-hovered: rgba(132, 137, 255, 1);
+  --btn-link-color-focused: rgba(132, 137, 255, 1);
+  --btn-link-color-active: rgba(132, 137, 255, 0.6);
+  --btn-link-color-disabled: #b4b4c9;
+  --btn-link-spinner-primary-ring-color: #{v.$accent-5};
+
+  // Danger
+  --btn-danger-bg-color: #{v.$error-5};
+  --btn-danger-bg-color-hovered: #{v.$error-4};
+  --btn-danger-bg-color-focused: #{v.$error-4};
+  --btn-danger-bg-color-active: #{v.$error-5};
+  --btn-danger-bg-color-disabled: rgba(148, 35, 35, 0.35);
+  --btn-danger-color: #{v.$surface-2};
+  --btn-danger-color-hovered: #{v.$surface-1};
+  --btn-danger-color-focused: #{v.$surface-2};
+  --btn-danger-color-active: #{v.$surface-1};
+  --btn-danger-color-disabled: #515167;
+  --btn-danger-spinner-primary-ring-color: #{v.$surface-0};
+}
+
+@mixin dark {
+  // Default
+  --btn-default-bg-color: rgba(53, 53, 112, 0.15);
+  --btn-default-bg-color-hovered: rgba(53, 53, 112, 0.3);
+  --btn-default-bg-color-focused: rgba(53, 53, 112, 0.15);
+  --btn-default-bg-color-active: rgba(53, 53, 112, 0.55);
+  --btn-default-bg-color-disabled: transparent;
+  --btn-default-color: #{v.$surface-9};
+  --btn-default-color-hovered: #{v.$surface-10};
+  --btn-default-color-focused: #{v.$surface-9};
+  --btn-default-color-active: #{v.$surface-10};
+  --btn-default-color-disabled: #{v.$surface-3};
+  --btn-default-spinner-primary-ring-color: #{v.$surface-10};
+
+  // Primary
+  --btn-primary-bg-color: #{v.$accent-9};
+  --btn-primary-bg-color-hovered: #{v.$accent-8};
+  --btn-primary-bg-color-focused: #{v.$accent-9};
+  --btn-primary-bg-color-active: #{v.$accent-7};
+  --btn-primary-bg-color-disabled: #{v.$surface-4};
+  --btn-primary-color: #{v.$surface-9};
+  --btn-primary-color-hovered: #{v.$surface-10};
+  --btn-primary-color-focused: #{v.$surface-9};
+  --btn-primary-color-active: #{v.$surface-10};
+  --btn-primary-color-disabled: #{v.$surface-6};
+  --btn-primary-spinner-primary-ring-color: #{v.$surface-10};
+
+  // Secondary
+  --btn-secondary-bg-color: transparent;
+  --btn-secondary-bg-color-hovered: transparent;
+  --btn-secondary-bg-color-focused: transparent;
+  --btn-secondary-bg-color-active: transparent;
+  --btn-secondary-bg-color-disabled: transparent;
+  --btn-secondary-color: #{v.$surface-8};
+  --btn-secondary-color-hovered: #{v.$surface-9};
+  --btn-secondary-color-focused: #{v.$surface-10};
+  --btn-secondary-color-active: #{v.$surface-8};
+  --btn-secondary-color-disabled: #{v.$surface-3};
+  --btn-secondary-spinner-primary-ring-color: #{v.$surface-10};
+
+  // Link
+  --btn-link-bg-color: transparent;
+  --btn-link-bg-color-hovered: transparent;
+  --btn-link-bg-color-focused: transparent;
+  --btn-link-bg-color-active: transparent;
+  --btn-link-bg-color-disabled: transparent;
+  --btn-link-color: rgba(132, 137, 255, 0.6);
+  --btn-link-color-hovered: rgba(132, 137, 255, 1);
+  --btn-link-color-focused: rgba(132, 137, 255, 1);
+  --btn-link-color-active: rgba(132, 137, 255, 0.6);
+  --btn-link-color-disabled: #{v.$surface-3};
+  --btn-link-spinner-primary-ring-color: #{v.$accent-5};
+
+  // Danger
+  --btn-danger-bg-color: #{v.$error-5};
+  --btn-danger-bg-color-hovered: #{v.$error-4};
+  --btn-danger-bg-color-focused: #{v.$error-4};
+  --btn-danger-bg-color-active: #{v.$error-5};
+  --btn-danger-bg-color-disabled: rgba(148, 35, 35, 0.35);
+  --btn-danger-color: #{v.$surface-9};
+  --btn-danger-color-hovered: #{v.$surface-9};
+  --btn-danger-color-focused: #{v.$surface-10};
+  --btn-danger-color-active: #{v.$surface-10};
+  --btn-danger-color-disabled: #{v.$surface-6};
+  --btn-danger-spinner-primary-ring-color: #{v.$surface-10};
+}

@@ -1605,7 +1605,12 @@
     webpack-hot-middleware "^2.25.1"
     webpack-virtual-modules "^0.6.0"
 
-"@storybook/components@8.4.4":
+"@storybook/client-logger@latest":
+  version "8.4.4"
+  resolved "https://registry.yarnpkg.com/@storybook/client-logger/-/client-logger-8.4.4.tgz#2cc80d0621a77d603bba8ae71e36cdecd07cb471"
+  integrity sha512-2rNWOaZUdOdvG73wMtXvGP9BUaSwNZDrucN35Yemj/7zcYJPzMgiv35eTR4jlzS8sOD4ZC8cKLZzzI9g7j1ZBQ==
+
+"@storybook/components@8.4.4", "@storybook/components@^8.4.4":
   version "8.4.4"
   resolved "https://registry.yarnpkg.com/@storybook/components/-/components-8.4.4.tgz#487c5d89061519bd3f8f3dcb7cbf052d032ea744"
   integrity sha512-0BSZVmsk23C0BSRKx3liZSVQFXtoF86XQFdNQxjrXIwdHIEN7TcL3DwcxeVUU5ilGp7HeDgAydGNIPGgTeEe6g==
@@ -1785,7 +1790,7 @@
     "@vitest/expect" "2.0.5"
     "@vitest/spy" "2.0.5"
 
-"@storybook/theming@8.4.4":
+"@storybook/theming@8.4.4", "@storybook/theming@^8.4.4":
   version "8.4.4"
   resolved "https://registry.yarnpkg.com/@storybook/theming/-/theming-8.4.4.tgz#3d209a235bf2b6f5543f1eebe78244f0104811b5"
   integrity sha512-iq4yt3Fx35ZV5owNC//E6G+QPV19xHHVN2Ugi3p7KOSFK3chuXX9mxZ1rfir+t+U30a5EPOEnlsY3/1LXn7aTw==
@@ -4835,6 +4840,11 @@ neo-async@^2.6.2:
   version "2.6.2"
   resolved "https://registry.yarnpkg.com/neo-async/-/neo-async-2.6.2.tgz#b4aafb93e3aeb2d8174ca53cf163ab7d7308305f"
   integrity sha512-Yd3UES5mWCSqR+qNT93S3UoYUkqAZ9lLg8a7g9rimsWmYGK8cVToA4/sF3RrshdyV3sAGMXVUmpMYOw+dLpOuw==
+
+next-themes@^0.4.3:
+  version "0.4.3"
+  resolved "https://registry.yarnpkg.com/next-themes/-/next-themes-0.4.3.tgz#ea54552d5986936d177eed393ea50b658ae44800"
+  integrity sha512-nG84VPkTdUHR2YeD89YchvV4I9RbiMAql3GiLEQlPvq1ioaqPaIReK+yMRdg/zgiXws620qS1rU30TiWmmG9lA==
 
 next@15.0.3:
   version "15.0.3"

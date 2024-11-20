@@ -1,7 +1,10 @@
+@forward 'variables';
 @use 'theme' as theme;
+@use 'mixins' as mixins;
 
-@import 'colors-tokens';
-@import 'variables';
+@forward 'reset';
+@forward 'colors-tokens';
+@forward 'typography-tokens';
 
 :root {
   --background: #ffffff;
@@ -52,4 +55,18 @@ html[data-theme='dark'] {
 
 html[data-theme='light'] {
   @include theme.light;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+* {
+  @include mixins.scrollbar();
+
+  &:focus {
+    outline: none;
+  }
 }

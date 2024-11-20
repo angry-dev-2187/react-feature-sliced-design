@@ -1,0 +1,292 @@
+@use 'variables' as v;
+
+// Desing system link: https://www.figma.com/file/JeSr04jN9pL5HdcN5fZ5Ey/Ignition-2.0-design-system?node-id=12661%3A22587&mode=dev
+
+// === Tokens ===
+
+// Background
+$button-background: var(--btn-bg-color);
+$button-background-hovered: var(--btn-bg-color-hovered);
+$button-background-focused: var(--btn-bg-color-focused);
+$button-background-active: var(--btn-bg-color-active);
+$button-background-disabled: var(--btn-bg-color-disabled);
+
+// Color
+$button-color: var(--btn-color);
+$button-color-hovered: var(--btn-color-hovered);
+$button-color-focused: var(--btn-color-focused);
+$button-color-active: var(--btn-color-active);
+$button-color-disabled: var(--btn-color-disabled);
+
+// Border
+$button-border-radius: v.$border-radius-sm;
+
+// === Styles ===
+
+.button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: v.$spacing-1;
+  border-radius: $button-border-radius;
+  background: $button-background;
+  color: $button-color;
+  font-size: var(--btn-font-size, 14);
+  font-weight: var(--btn-font-weight, 600);
+  line-height: var(--btn-line-height, 1.42);
+  transition: background-color v.$duration-s ease, color v.$duration-s ease;
+
+  &.fullWidth {
+    width: 100%;
+    display: flex;
+  }
+
+  .before,
+  .after {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 auto;
+    font: inherit;
+
+    svg {
+      vertical-align: middle;
+    }
+  }
+
+  .content {
+    flex: 1 1 auto;
+    text-align: center;
+    white-space: nowrap;
+    font: inherit;
+  }
+
+  // === Font size ===
+  // These styles are not present in design system directly, but smaller buttons apper from time to time in the desing
+
+  &.fs-xs {
+    --btn-font-size: #{v.$font-size-xs};
+  }
+
+  &.fs-sm {
+    --btn-font-size: #{v.$font-size-sm};
+  }
+
+  &.fs-md {
+    --btn-font-size: #{v.$font-size-md};
+  }
+
+  &.fs-lg {
+    --btn-font-size: 18px;
+  }
+
+  // === Font weight ===
+  // These styles are not present in design system directly, but smaller buttons apper from time to time in the desing
+
+  &.fw-regular {
+    --btn-font-weight: #{v.$font-weight-regular};
+  }
+
+  &.fw-semibold {
+    --btn-font-weight: #{v.$font-weight-semibold};
+  }
+
+  // === Line height ===
+  // These styles are not present in design system directly, but smaller buttons apper from time to time in the desing
+
+  &.lh-default {
+    --btn-line-height: 1.42;
+  }
+
+  &.lh-sm {
+    --btn-line-height: #{v.$line-height-sm};
+  }
+
+  &.lh-md {
+    --btn-line-height: #{v.$line-height-md};
+  }
+
+  &.lh-lg {
+    --btn-line-height: #{v.$line-height-lg};
+  }
+
+  // === Sizes ===
+
+  &.xs {
+    padding: v.$spacing-0-25 v.$spacing-1-5;
+  }
+
+  &.sm {
+    padding: v.$spacing-0-5 + v.$spacing-0-25 v.$spacing-1-5;
+  }
+
+  &.md {
+    padding: v.$spacing-1 + v.$spacing-0-25 v.$spacing-2;
+  }
+
+  &.lg {
+    padding: v.$spacing-1-5 + v.$spacing-0-25 v.$spacing-2;
+  }
+
+  &.xl {
+    padding: v.$spacing-2 + v.$spacing-0-25 v.$spacing-2-5;
+  }
+}
+
+.iconButton {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: $button-border-radius;
+  background: $button-background;
+  color: $button-color;
+
+  // === Sizes ===
+
+  &.xs {
+    padding: v.$spacing-0-25 v.$spacing-0-5;
+  }
+
+  &.sm {
+    padding: v.$spacing-0-5;
+  }
+}
+
+.button .loader,
+.iconButton .loader {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .spinner {
+    --spinner-primary-ring-color: var(--btn-spinner-primary-ring-color);
+  }
+}
+
+.button,
+.iconButton {
+  // === States ===
+
+  &:hover,
+  &.hovered {
+    background: $button-background-hovered;
+    color: $button-color-hovered;
+  }
+
+  &:focus {
+    background: $button-background-focused;
+    color: $button-color-focused;
+  }
+
+  &:active {
+    background: $button-background-active;
+    color: $button-color-active;
+  }
+
+  &.disabled {
+    cursor: not-allowed;
+    background: $button-background-disabled;
+    color: $button-color-disabled;
+  }
+
+  &.loading {
+    pointer-events: none;
+
+    & > *:not(.loader) {
+      opacity: 0;
+    }
+  }
+
+  &.focusedByKeyboard {
+    &::after {
+      content: '';
+      position: absolute;
+      top: -4px;
+      bottom: -4px;
+      right: -4px;
+      left: -4px;
+      border-radius: $button-border-radius;
+      border: 2px solid v.$accent-5;
+      z-index: 1;
+    }
+  }
+
+  // === Variants ===
+
+  &.default {
+    --btn-bg-color: var(--btn-default-bg-color);
+    --btn-bg-color-hovered: var(--btn-default-bg-color-hovered);
+    --btn-bg-color-focused: var(--btn-default-bg-color-focused);
+    --btn-bg-color-active: var(--btn-default-bg-color-active);
+    --btn-bg-color-disabled: var(--btn-default-bg-color-disabled);
+    --btn-color: var(--btn-default-color);
+    --btn-color-hovered: var(--btn-default-color-hovered);
+    --btn-color-focused: var(--btn-default-color-focused);
+    --btn-color-active: var(--btn-default-color-active);
+    --btn-color-disabled: var(--btn-default-color-disabled);
+    --btn-spinner-primary-ring-color: var(--btn-default-spinner-primary-ring-color);
+  }
+
+  &.primary {
+    --btn-bg-color: var(--btn-primary-bg-color);
+    --btn-bg-color-hovered: var(--btn-primary-bg-color-hovered);
+    --btn-bg-color-focused: var(--btn-primary-bg-color-focused);
+    --btn-bg-color-active: var(--btn-primary-bg-color-active);
+    --btn-bg-color-disabled: var(--btn-primary-bg-color-disabled);
+    --btn-color: var(--btn-primary-color);
+    --btn-color-hovered: var(--btn-primary-color-hovered);
+    --btn-color-focused: var(--btn-primary-color-focused);
+    --btn-color-active: var(--btn-primary-color-active);
+    --btn-color-disabled: var(--btn-primary-color-disabled);
+    --btn-spinner-primary-ring-color: var(--btn-primary-spinner-primary-ring-color);
+  }
+
+  &.secondary {
+    --btn-bg-color: var(--btn-secondary-bg-color);
+    --btn-bg-color-hovered: var(--btn-secondary-bg-color-hovered);
+    --btn-bg-color-focused: var(--btn-secondary-bg-color-focused);
+    --btn-bg-color-active: var(--btn-secondary-bg-color-active);
+    --btn-bg-color-disabled: var(--btn-secondary-bg-color-disabled);
+    --btn-color: var(--btn-secondary-color);
+    --btn-color-hovered: var(--btn-secondary-color-hovered);
+    --btn-color-focused: var(--btn-secondary-color-focused);
+    --btn-color-active: var(--btn-secondary-color-active);
+    --btn-color-disabled: var(--btn-secondary-color-disabled);
+    --btn-spinner-primary-ring-color: var(--btn-secondary-spinner-primary-ring-color);
+  }
+
+  &.link {
+    --btn-bg-color: var(--btn-link-bg-color);
+    --btn-bg-color-hovered: var(--btn-link-bg-color-hovered);
+    --btn-bg-color-focused: var(--btn-link-bg-color-focused);
+    --btn-bg-color-active: var(--btn-link-bg-color-active);
+    --btn-bg-color-disabled: var(--btn-link-bg-color-disabled);
+    --btn-color: var(--btn-link-color);
+    --btn-color-hovered: var(--btn-link-color-hovered);
+    --btn-color-focused: var(--btn-link-color-focused);
+    --btn-color-active: var(--btn-link-color-active);
+    --btn-color-disabled: var(--btn-link-color-disabled);
+    --btn-spinner-primary-ring-color: var(--btn-link-spinner-primary-ring-color);
+  }
+
+  &.danger {
+    --btn-bg-color: var(--btn-danger-bg-color);
+    --btn-bg-color-hovered: var(--btn-danger-bg-color-hovered);
+    --btn-bg-color-focused: var(--btn-danger-bg-color-focused);
+    --btn-bg-color-active: var(--btn-danger-bg-color-active);
+    --btn-bg-color-disabled: var(--btn-danger-bg-color-disabled);
+    --btn-color: var(--btn-danger-color);
+    --btn-color-hovered: var(--btn-danger-color-hovered);
+    --btn-color-focused: var(--btn-danger-color-focused);
+    --btn-color-active: var(--btn-danger-color-active);
+    --btn-color-disabled: var(--btn-danger-color-disabled);
+    --btn-spinner-primary-ring-color: var(--btn-danger-spinner-primary-ring-color);
+  }
+}
