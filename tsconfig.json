@@ -14,6 +14,7 @@
     "jsx": "preserve",
     "incremental": true,
     "paths": {
+      "~provider/*": ["./src/provider/*"],
       "~shared/*": ["./src/shared/*"],
       "~styles/*": ["./src/styles/*"]
     }

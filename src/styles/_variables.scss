@@ -1,7 +1,7 @@
-@forward "breakpoints";
-@forward "spacings";
-@forward "colors-variables";
-@forward "typography-variables";
+@forward 'breakpoints';
+@forward 'spacings';
+@forward 'colors-variables';
+@forward 'typography-variables';
 
 $color-white: #fff;
 
@@ -19,6 +19,9 @@ $border-radius-tooltip: $border-radius-sm;
 $duration-s: 0.2s;
 $duration-m: 0.4s;
 $duration-l: 0.6s;
+
+// Layout
+$scrollbar-width: 4px;
 
 $align-map: (
   start: flex-start,
