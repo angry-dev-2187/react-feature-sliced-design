@@ -1,0 +1,8 @@
+@use "variables" as v;
+
+.color {
+  flex: 1;
+  width: v.$spacing-2-5;
+  height: v.$spacing-3;
+  cursor: pointer;
+}
