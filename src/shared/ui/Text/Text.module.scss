@@ -1,0 +1,169 @@
+@use 'variables' as v;
+
+.root {
+  // === Size ===
+
+  &.heading-xl {
+    font-size: v.$font-size-xxxl;
+  }
+
+  &.heading-lg {
+    font-size: v.$font-size-xxl;
+  }
+
+  &.heading-md {
+    font-size: v.$font-size-xl;
+  }
+
+  &.heading-sm {
+    font-size: v.$font-size-lg;
+  }
+
+  &.body-xl {
+    font-size: v.$font-size-xl;
+  }
+
+  &.body-lg {
+    font-size: v.$font-size-lg;
+  }
+
+  &.body-md {
+    font-size: v.$font-size-md;
+  }
+
+  &.body-sm {
+    font-size: v.$font-size-sm;
+  }
+
+  &.caption {
+    font-size: v.$font-size-xs;
+  }
+
+  // === Weight ===
+
+  &.weight-bold {
+    font-weight: v.$font-weight-bold;
+  }
+
+  &.weight-semibold {
+    font-weight: v.$font-weight-semibold;
+  }
+
+  &.weight-regular {
+    font-weight: v.$font-weight-regular;
+  }
+
+  // === Line height ===
+
+  &.line-height-lg {
+    line-height: v.$line-height-lg;
+  }
+
+  &.line-height-md {
+    line-height: v.$line-height-md;
+  }
+
+  &.line-height-sm {
+    line-height: v.$line-height-sm;
+  }
+
+  // === Variants ===
+
+  &.default {
+    color: v.$surface-9;
+  }
+
+  &.secondary {
+    color: v.$surface-8;
+  }
+
+  &.accent {
+    color: v.$accent-5;
+  }
+
+  &.highlight {
+    color: v.$highlight-4;
+  }
+
+  &.success {
+    color: v.$success-4;
+  }
+
+  &.warning {
+    color: v.$warning-4;
+  }
+
+  &.error {
+    color: v.$error-4;
+  }
+
+  // === Text align ===
+
+  &.align-start {
+    text-align: start;
+  }
+
+  &.align-center {
+    text-align: center;
+  }
+
+  &.align-end {
+    text-align: end;
+  }
+
+  // === Style ===
+
+  &.style-normal {
+    font-style: normal;
+  }
+
+  &.style-italic {
+    font-style: italic;
+  }
+
+  // === Decoration ===
+
+  &.decoration-none {
+    text-decoration: none;
+  }
+
+  &.decoration-underline {
+    text-decoration: underline;
+  }
+
+  &.decoration-line-through {
+    text-decoration: line-through;
+  }
+
+  // === Overflow ===
+
+  &.overflow-clip {
+    text-overflow: clip;
+  }
+
+  &.overflow-ellipsis {
+    text-overflow: ellipsis;
+  }
+
+  // === White Space ===
+
+  &.white-space-normal {
+    white-space: normal;
+  }
+
+  &.white-space-nowrap {
+    white-space: nowrap;
+  }
+
+  &.white-space-pre {
+    white-space: pre;
+  }
+
+  &.white-space-pre-wrap {
+    white-space: pre-wrap;
+  }
+
+  &.white-space-pre-line {
+    white-space: pre-line;
+  }
+}
