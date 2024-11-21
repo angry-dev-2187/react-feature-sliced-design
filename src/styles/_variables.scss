@@ -5,6 +5,32 @@
 
 $color-white: #fff;
 
+$background-color-tooltip: var(--surface-3);
+$text-color-tooltip: var(--surface-9);
+$text-color-hint: var(--surface-7);
+$text-color-hint-hovered: var(--surface-9);
+
+// Shadow
+$box-shadow-1: rgba(50, 50, 93, 0.05) 0 2px 5px -1px, rgba(0, 0, 0, 0.06) 0 1px 3px -1px;
+$box-shadow-2: rgba(50, 50, 93, 0.1) 0 5px 10px -2px, rgba(0, 0, 0, 0.12) 0 3px 6px -3px;
+$box-shadow-3: rgba(50, 50, 93, 0.15) 0 7px 16px -3px, rgba(0, 0, 0, 0.18) 0 4px 9px -4px;
+$box-shadow-4: rgba(50, 50, 93, 0.2) 0 10px 21px -4px, rgba(0, 0, 0, 0.24) 0 6px 12px -6px;
+$box-shadow-5: rgba(50, 50, 93, 0.25) 0 13px 27px -5px, rgba(0, 0, 0, 0.3) 0 8px 16px -8px;
+
+$box-shadow-tooltip: $box-shadow-3;
+$box-shadow-popup: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+
+
+// Z-Index
+$z-index-dropdown: 1000;
+$z-index-sticky: 1020;
+$z-index-fixed: 1030;
+$z-index-overlay: 1040;
+$z-index-drawer: 1040;
+$z-index-modal: 1060;
+$z-index-popover: 1070;
+$z-index-tooltip: 1080;
+
 // Border-radiuses
 $border-radius-xs: 3px;
 $border-radius-sm: 6px;

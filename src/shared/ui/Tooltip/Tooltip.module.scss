@@ -1,0 +1,23 @@
+@import 'variables';
+
+.root {
+  z-index: $z-index-tooltip;
+}
+
+.tooltip {
+  padding: $spacing-1;
+  z-index: $z-index-tooltip;
+  background: $background-color-tooltip;
+  border-radius: $border-radius-tooltip;
+  box-shadow: $box-shadow-tooltip;
+  font-weight: $font-weight-regular;
+  font-size: $font-size-sm;
+  line-height: $line-height-md;
+  color: $text-color-tooltip;
+  text-align: center;
+  overflow-wrap: break-word;
+}
+
+.arrow {
+  fill: $background-color-tooltip;
+}
