@@ -1,0 +1,130 @@
+@use 'variables' as v;
+
+.root {
+  width: v.$spacing-2;
+  height: v.$spacing-2;
+  min-width: 0;
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border: 1px solid v.$surface-6;
+  border-radius: v.$border-radius-xs;
+  background-color: transparent;
+  overflow: hidden;
+  box-sizing: border-box;
+  vertical-align: middle;
+  line-height: 0;
+
+  .input {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    opacity: 0;
+    cursor: pointer;
+
+    &:disabled {
+      cursor: not-allowed;
+    }
+
+    &:read-only {
+      cursor: default;
+    }
+  }
+
+  .icon {
+    fill: v.$surface-9;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    cursor: none;
+  }
+
+  /* Variants */
+
+  &.default {
+    &.checked {
+      background-color: v.$surface-4;
+    }
+  }
+
+  &.primary {
+    &.checked {
+      background-color: v.$accent-8;
+    }
+  }
+
+  /* State */
+
+  &:not(:read-only),
+  &:not(:disabled) {
+    cursor: pointer;
+
+    .input {
+      cursor: pointer;
+    }
+  }
+
+  &.disabled {
+    cursor: not-allowed;
+
+    .input {
+      cursor: not-allowed;
+    }
+  }
+
+  &.readOnly {
+    cursor: default;
+
+    .input {
+      cursor: default;
+    }
+  }
+
+  &.br-md {
+    border-radius: v.$border-radius-xs;
+  }
+
+  &.br-lg {
+    border-radius: v.$border-radius-md;
+  }
+
+  // === Sizes ===
+
+  &.xs {
+    width: v.$spacing-2;
+    height: v.$spacing-2;
+  }
+
+  &.sm {
+    width: v.$spacing-2;
+    height: v.$spacing-2;
+  }
+
+  &.md {
+    width: v.$spacing-2;
+    height: v.$spacing-2;
+  }
+
+  &.lg {
+    width: v.$spacing-3;
+    height: v.$spacing-3;
+    .icon {
+      width: v.$spacing-3;
+      height: v.$spacing-3;
+    }
+  }
+
+  &.xl {
+    width: v.$spacing-3;
+    height: v.$spacing-3;
+  }
+}
