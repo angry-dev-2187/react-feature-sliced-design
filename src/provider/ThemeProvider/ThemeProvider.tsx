@@ -1,6 +1,6 @@
 import { useTheme as useNextTheme, ThemeProvider as NextThemeProvider, useTheme } from 'next-themes'
 import { PropsWithChildren, useEffect } from 'react'
-import { Theme } from '../../types'
+import { Theme } from '../../types/types'
 
 export const userThemeToNextThemeMap = {
   [Theme.DARK]: 'dark',
