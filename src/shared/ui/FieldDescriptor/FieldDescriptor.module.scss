@@ -1,0 +1,31 @@
+@use 'variables' as v;
+
+.root {
+  --field-descriptor-font-size: #{v.$font-size-xs};
+  --field-descriptor-font-weight: #{v.$font-weight-regular};
+  --field-descriptor-line-height: #{v.$line-height-md};
+
+  min-width: 0;
+  min-height: v.$spacing-2;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: v.$spacing-0-5;
+  gap: v.$spacing-0-5;
+  font-size: var(--field-descriptor-font-size);
+  font-weight: var(--field-descriptor-font-weight);
+  line-height: var(--field-descriptor-line-height);
+
+  // Variants
+  &.info {
+    color: v.$surface-7;
+  }
+
+  &.error {
+    color: v.$error-4;
+  }
+
+  &.success {
+    color: v.$success-4;
+  }
+}

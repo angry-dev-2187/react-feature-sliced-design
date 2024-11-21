@@ -1,0 +1,161 @@
+@use 'variables' as v;
+
+.root {
+  $input-padding-y: calc(#{v.$spacing-1 * 1.25} - var(--input-border-width));
+  $input-padding-x: calc(#{v.$spacing-1} - var(--input-border-width));
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: $input-padding-y $input-padding-x;
+  font-size: var(--input-font-size);
+  font-weight: var(--input-font-weight);
+  line-height: var(--input-line-height);
+  color: var(--input-text-color);
+  background-color: var(--input-background-color);
+  border-radius: var(--input-border-radius);
+  border-width: var(--input-border-width);
+  border-color: var(--input-border-color);
+  border-style: solid;
+  transition: border-color v.$duration-s ease;
+  cursor: text;
+
+  .before,
+  .after {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 auto;
+    min-width: 0;
+  }
+
+  .before {
+    margin-right: v.$spacing-0-5;
+  }
+
+  .after {
+    margin-left: v.$spacing-0-5;
+  }
+
+  .input {
+    min-width: 0;
+    min-height: v.$spacing-1 * 2.5;
+    flex: 1 1 0;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: inherit;
+    text-align: start;
+    vertical-align: middle;
+    font: inherit;
+    cursor: inherit;
+
+    &::placeholder {
+      color: var(--input-placeholder-color);
+      transition: color v.$duration-s ease;
+    }
+  }
+
+  &.fullWidth {
+    width: 100%;
+  }
+
+  &.readOnly {
+    cursor: text;
+  }
+
+  &.disabled {
+    cursor: not-allowed;
+    color: var(--input-text-color-disabled);
+
+    .input::placeholder {
+      color: var(--input-placeholder-color-disabled);
+    }
+  }
+
+  &.invalid {
+    border-color: var(--input-border-color-invalid);
+  }
+
+  &:not(.disabled):not(.readOnly) {
+    &:hover,
+    &.hovered {
+      border-color: var(--input-border-color-hovered);
+
+      .input::placeholder {
+        color: var(--input-placeholder-color-hovered);
+      }
+    }
+
+    &:focus-within,
+    &.focused {
+      border-color: var(--input-border-color-focused);
+
+      .input::placeholder {
+        color: var(--input-placeholder-color-focused);
+      }
+    }
+  }
+
+  // === Variants ===
+
+  &.default {
+    // Typography
+    --input-font-size: var(--field-font-size);
+    --input-font-weight: var(--field-font-weight);
+    --input-line-height: var(--field-line-height);
+
+    // Border
+    --input-border-width: var(--field-border-width);
+    --input-border-radius: var(--field-border-radius);
+
+    // Text
+    --input-text-color: var(--field-text-color);
+    --input-text-color-disabled: var(--field-text-color-disabled);
+
+    // Placeholder
+    --input-placeholder-color: var(--field-placeholder-color);
+    --input-placeholder-color-hovered: var(--field-placeholder-color-hovered);
+    --input-placeholder-color-focused: var(--field-placeholder-color-focused);
+    --input-placeholder-color-disabled: var(--field-placeholder-color-disabled);
+
+    // Border
+    --input-border-color: var(--field-border-color);
+    --input-border-color-hovered: var(--field-border-color-hovered);
+    --input-border-color-focused: var(--field-border-color-focused);
+    --input-border-color-invalid: var(--field-border-color-invalid);
+
+    // Background
+    --input-background-color: var(--field-background-color);
+  }
+
+  &.secondary {
+    // Typography
+    --input-font-size: var(--field-font-size);
+    --input-font-weight: var(--field-font-weight);
+    --input-line-height: var(--field-line-height);
+
+    // Border
+    --input-border-width: var(--field-border-width);
+    --input-border-radius: var(--field-border-radius);
+
+    // Text
+    --input-text-color: var(--field-text-secondary-color);
+    --input-text-color-disabled: var(--field-text-color-secondary-disabled);
+
+    // Placeholder
+    --input-placeholder-color: var(--field-placeholder-secondary-color);
+    --input-placeholder-color-hovered: var(--field-placeholder-secondary-color-hovered);
+    --input-placeholder-color-focused: var(--field-placeholder-secondary-color-focused);
+    --input-placeholder-color-disabled: var(--field-placeholder-secondary-color-disabled);
+
+    // Border
+    --input-border-color: var(--field-border-secondary-color);
+    --input-border-color-hovered: var(--field-border-secondary-color-hovered);
+    --input-border-color-focused: var(--field-border-secondary-color-focused);
+    --input-border-color-invalid: var(--field-border-secondary-color-invalid);
+
+    // Background
+    --input-background-color: var(--field-background-secondary-color);
+  }
+}
