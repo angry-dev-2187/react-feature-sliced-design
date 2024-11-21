@@ -1,0 +1,85 @@
+@use 'variables' as v;
+
+.root {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  flex: 0 0 auto;
+
+  // Variants
+
+  &.default {
+    svg {
+      color: v.$surface-9;
+    }
+  }
+
+  &.secondary {
+    svg {
+      color: v.$surface-8;
+    }
+  }
+
+  &.accent {
+    svg {
+      color: v.$accent-5;
+    }
+  }
+
+  &.highlight {
+    svg {
+      color: v.$highlight-4;
+    }
+  }
+
+  &.success {
+    svg {
+      color: v.$success-4;
+    }
+  }
+
+  &.warning {
+    svg {
+      color: v.$warning-4;
+    }
+  }
+
+  &.error {
+    svg {
+      color: v.$error-4;
+    }
+  }
+
+  // Sizes
+
+  &.sm {
+    width: 16px;
+    height: 16px;
+
+    svg {
+      width: 16px;
+      height: 16px;
+    }
+  }
+
+  &.md {
+    width: 20px;
+    height: 20px;
+
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  &.lg {
+    width: 24px;
+    height: 24px;
+
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+  }
+}
