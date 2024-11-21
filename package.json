@@ -11,6 +11,7 @@
     "build-storybook": "storybook build"
   },
   "dependencies": {
+    "@floating-ui/react": "^0.26.28",
     "@storybook/client-logger": "latest",
     "@storybook/components": "^8.4.4",
     "@storybook/icons": "^1.2.12",
